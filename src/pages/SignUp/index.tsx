@@ -11,7 +11,7 @@ import { Container, Content, Background } from './styles';
 
 const SignUp: React.FC = () => {
   function handleSubmit(data: object): void {
-
+    console.log(data);
   }
 
   return (
@@ -30,7 +30,7 @@ const SignUp: React.FC = () => {
             name="password"
             icon={FiLock}
             type="password"
-            placeholder="E-Senha"
+            placeholder="Senha"
           />
 
           <Button>Cadastrar</Button>
