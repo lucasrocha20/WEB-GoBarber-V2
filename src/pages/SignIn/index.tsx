@@ -30,19 +30,19 @@ const SignIn: React.FC = () => {
             placeholder="E-Senha"
           />
 
-          <Button>Entrar</Button>
+          <Button type="submit">Entrar</Button>
 
           <a href="forgot">Esqueci minha senha</a>
         </Form>
 
         <a href="login">
           <FiLogIn />
-        Criar conta
-      </a>
+          Criar conta
+        </a>
       </Content>
       <Background />
     </Container>
-  )
-}
+  );
+};
 
 export default SignIn;

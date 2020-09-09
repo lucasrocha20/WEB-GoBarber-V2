@@ -1,4 +1,10 @@
-import React, { InputHTMLAttributes, useEffect, useRef, useState, useCallback } from 'react';
+import React, {
+  InputHTMLAttributes,
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+} from 'react';
 import { IconBaseProps } from 'react-icons';
 import { useField } from '@unform/core';
 
@@ -43,8 +49,10 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
         ref={inputRef}
         {...rest}
       />
+
+      {error}
     </Container>
-  )
+  );
 };
 
 export default Input;
