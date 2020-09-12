@@ -10,14 +10,18 @@ interface ToastContextData {
 const ToastContext = createContext<ToastContextData>({} as ToastContextData);
 
 const ToastProvider: React.FC = ({ children }) => {
-  const addToast = useCallback(() => {}, []);
+  const addToast = useCallback(() => {
+    console.log('addToast');
+  }, []);
 
-  const removeToast = useCallback(() => {}, []);
+  const removeToast = useCallback(() => {
+    console.log('removeToast');
+  }, []);
 
   return (
     <ToastContext.Provider value={{ addToast, removeToast }}>
       {children}
-      <ToastContainer/>
+      <ToastContainer />
     </ToastContext.Provider>
   );
 };
@@ -25,11 +29,11 @@ const ToastProvider: React.FC = ({ children }) => {
 function useToast(): ToastContextData {
   const context = useContext(ToastContext);
 
-  if(!context) {
+  if (!context) {
     throw new Error('useToast must be used within a ToastProvider');
   }
 
   return context;
 }
 
-export {ToastProvider, useToast }
+export { ToastProvider, useToast };
